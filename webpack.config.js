@@ -22,7 +22,8 @@ module.exports = {
   plugins: [
     new ReactRefreshWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html')
+      template: path.resolve(__dirname, 'public', 'index.html'),
+      favicon: "./src/assets/fiveicon.ico"
     })
   ],
   module: {

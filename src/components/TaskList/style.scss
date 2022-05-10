@@ -30,9 +30,35 @@
   background-color: #E5E8E8;
   padding: 1rem;
   border-bottom: 2px solid #7D3C98;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   input {
     margin-right: 1rem;
   }
 
+  button {
+    border: none;
+    cursor: pointer;
+    background: none;
+
+    
+  }
+
+}
+
+.icon-trash {
+  color:#CB4335;
+  align-self: center;
+  width: 25px;
+  height: 25px;
+
+  &:hover {
+    color: #B03A2E;
+  }
+}
+
+.checked{
+  text-decoration: line-through;
 }
