@@ -43,6 +43,11 @@ module.exports = {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        use: 'svg-url-loader',
       }
     ]
   }
