@@ -7,6 +7,7 @@ import './styles/global.scss'
 interface TasksItens{
   id: number;
   title: string;
+  isChecked: boolean
 }
 
 export function App(){
@@ -14,7 +15,7 @@ export function App(){
   const [tasks, setTasks] = useState<TasksItens[]>([])
 
   function addNewTask(id: number, title: string){
-    setTasks([...tasks, {id: id, title: title}])
+    setTasks([...tasks, {id: id, title: title, isChecked: false}])
   }
 
   return (
