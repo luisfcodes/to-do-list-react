@@ -1,0 +1,58 @@
+.modal-content {
+  border-radius: 0.7rem;
+  overflow: hidden;
+  background-color: #E5E8E8;
+
+  input {
+    border: 1px solid black;
+    margin: 1rem auto;
+    display: block;
+    width: 90%;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+  }
+}
+
+.modal-header{
+  background-color: #1F618D; 
+
+  h2 {
+    margin-left: 0.5rem;
+    color: #fff; 
+    padding: 0.4rem 0;
+  }
+}
+
+.modal-buttons{
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem;
+
+  button {
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+  }
+
+  .button-save {
+    background-color: #28B463;
+    color: #fff;
+
+    &:hover{
+      background-color: #239B56;
+    }
+  }
+
+  .button-close {
+    margin: 0 0.9rem;
+    background-color: #CB4335;
+    color: #fff;
+
+    &:hover {
+      background-color: #B03A2E;
+    }
+  }
+}
+

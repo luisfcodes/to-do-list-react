@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Header } from './components/Header/Header'
+import { ModalForm } from './components/Modal/ModalForm'
 import { TaskForm } from './components/TaskForm/TaskForm'
 import { TaskList } from './components/TaskList/TaskList'
 import './styles/global.scss'

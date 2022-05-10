@@ -42,15 +42,12 @@
     border: none;
     cursor: pointer;
     background: none;
-
-    
   }
 
 }
 
 .icon-trash {
   color:#CB4335;
-  align-self: center;
   width: 25px;
   height: 25px;
 
@@ -59,6 +56,18 @@
   }
 }
 
+.icon-edit {
+  color: #28B463;
+  width: 25px;
+  height: 25px;
+  margin-right: 0.8rem;
+
+  &:hover {
+    color: #239B56;
+  }
+}
+
 .checked{
   text-decoration: line-through;
+  color: #28B463;
 }
