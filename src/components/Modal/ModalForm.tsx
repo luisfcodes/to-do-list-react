@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { BsPencilSquare } from "react-icons/bs";
 import Modal from "react-modal"
 import "./style.scss"
 
@@ -10,15 +11,25 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '30%',
-    border: 'none'
+    width: '25%',
+    border: 'none',
+    padding: '0',
+    
   },
 };
 
+interface ModalFormProps {
+  tasks: any;
+  setTasks: any;
+  id: number;
+  text: string;
+}
+
 Modal.setAppElement('#root');
 
-export function ModalForm() {
+export function ModalForm({tasks, setTasks, id, text}: ModalFormProps) {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [newTitleTask, setNewTitleTask] = useState(text);
 
   function openModal() {
     setIsOpen(true);
@@ -28,9 +39,31 @@ export function ModalForm() {
     setIsOpen(false);
   }
 
+  function editTask(id: number){
+    const newList: any = []
+    tasks.map((element: { id: number; title: string }) => {
+      if (element.id !== id) {
+        newList.push(element)
+      } else {
+        if(newTitleTask){
+          element.title = newTitleTask
+        } else {
+          setNewTitleTask(element.title)
+        }
+        newList.push(element)
+      }
+    })
+
+    setTasks(newList)
+    closeModal()
+  }
+
   return (
     <div>
-      <button onClick={openModal}>Open Modal</button>
+      <button onClick={openModal}>
+        <BsPencilSquare className='icon-edit' />
+      </button>
+      
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -42,11 +75,14 @@ export function ModalForm() {
             <h2>Editar tarefa</h2>
           </div>
 
-          <input type="text" />
+            <div className="modal-text-edit">
+              <label htmlFor="title">Insira um novo títilo para sua tarefa</label>
+              <input type="text" value={newTitleTask} id="title" onChange={e => setNewTitleTask(e.target.value)}/>
+            </div>
 
           <div className="modal-buttons">
-            <button className="button-save">Salvar</button>
-            <button onClick={closeModal} className="button-close">Fechar</button>
+            <button type="submit" className="button-save" onClick={() => editTask(id)}>Salvar</button>
+            <button onClick={() => {setNewTitleTask(text); closeModal()}} className="button-close">Fechar</button>
           </div>
           
         </div>

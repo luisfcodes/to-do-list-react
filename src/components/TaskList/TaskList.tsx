@@ -1,11 +1,10 @@
 import './style.scss'
 import { CgTrash } from "react-icons/cg";
-import { BsPencilSquare } from "react-icons/bs";
 import { ModalForm } from '../Modal/ModalForm';
 
 interface TaskListProps {
   tasks: any;
-  setTasks: any
+  setTasks: any;
 }
 
 export function TaskList({ tasks, setTasks }: TaskListProps) {
@@ -19,6 +18,7 @@ export function TaskList({ tasks, setTasks }: TaskListProps) {
     })
     setTasks(newList)
   }
+
 
   function isChecked(id: number) {
     const newList: any = []
@@ -36,7 +36,7 @@ export function TaskList({ tasks, setTasks }: TaskListProps) {
 
   if (tasks && tasks.length > 0) {
     return (
-      <section className='tilte-list'>
+      <section className='list'>
         <h3>Lista de Tarefas</h3>
         <div className='task-list'>
           <ul>
@@ -47,16 +47,12 @@ export function TaskList({ tasks, setTasks }: TaskListProps) {
                     <input type="checkbox" name="task-item" onChange={() => isChecked(element.id)} checked={element.isChecked} />
                     <span className={element.isChecked ? 'checked' : ''}>{element.title}</span>
                   </div>
-                  <div>
-                    <button onClick={() => removeTask(element.id)}>
-                      <BsPencilSquare className='icon-edit' />
-                    </button>
-                    <ModalForm />
+                  <div className='itens-edit-delete'>
+                    <ModalForm tasks={tasks} setTasks={setTasks} id={element.id} text={element.title}/>
                     <button onClick={() => removeTask(element.id)}>
                       <CgTrash className='icon-trash' />
                     </button>
                   </div>
-
                 </li>
               )
             })}

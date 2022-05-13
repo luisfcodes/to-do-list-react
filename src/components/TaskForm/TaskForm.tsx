@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './style.scss'
 
 interface TaskFormProps {
@@ -9,7 +9,8 @@ let id = 0
 
 export function TaskForm({setTasks}:TaskFormProps){
 
-  function validateNewTask(title: string){
+  function validateNewTask(title: string, event: React.MouseEvent){
+    event.preventDefault()
     if(title){
       id += 1
       setTasks(id, title)
@@ -24,10 +25,10 @@ export function TaskForm({setTasks}:TaskFormProps){
       <div>
         <h3>Adicione uma nova tarefa</h3>
       </div>
-      <div className='task-name'>
+      <form className='task-name'>
         <input type="text" className='input-text' placeholder='Digite o nome da tarefa' onChange={e => setTitle(e.target.value)} value={title}/>
-        <input type="button" value="Adicionar" className='input-button' onClick={() => validateNewTask(title)}/>
-      </div>
+        <input type="submit" value="Adicionar" className='input-button' onClick={e => validateNewTask(title, e)}/>
+      </form>
     </section>
   )
 }

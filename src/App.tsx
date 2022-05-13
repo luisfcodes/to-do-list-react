@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
-import { ModalForm } from './components/Modal/ModalForm'
 import { TaskForm } from './components/TaskForm/TaskForm'
 import { TaskList } from './components/TaskList/TaskList'
 import './styles/global.scss'
@@ -20,10 +20,11 @@ export function App(){
   }
 
   return (
-    <>
-      <Header />
-      <TaskForm setTasks={addNewTask}/>
-      <TaskList tasks={tasks} setTasks={setTasks}/>
-    </>
+      <div className='container'>
+        <Header />
+        <TaskForm setTasks={addNewTask}/>
+        <TaskList tasks={tasks} setTasks={setTasks}/>
+        <Footer />
+      </div>
   )
 }

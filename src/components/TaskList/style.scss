@@ -1,18 +1,18 @@
-.tilte-list {
-  max-width: 80%;
+.list {
+  max-width: 60%;
   display: flex;
   flex-direction: column;
-  margin: 2rem auto;
-  
+  margin: 2rem auto 0;  
 
   h3 {
     border-radius: 0.5rem 0.5rem 0 0;
     padding: 0.7rem 0;
     text-transform: uppercase;
-    background-color: #7D3C98;
+    background-color: #5353E6;
     width: 100%;
     text-align: center;
     color: #FFF;
+    font-size: 1.3rem;
   }
 }
 
@@ -22,6 +22,7 @@
     &:last-child {
       border-bottom: none;
       border-radius: 0 0 0.5rem 0.5rem;
+      margin-bottom: 5rem;
     }
   }
 }
@@ -29,10 +30,14 @@
 .item-list {
   background-color: #E5E8E8;
   padding: 1rem;
-  border-bottom: 2px solid #7D3C98;
+  border-bottom: 2px solid #7575FF;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+  span {
+    font-size: 1.3rem;
+  }
 
   input {
     margin-right: 1rem;
@@ -56,15 +61,9 @@
   }
 }
 
-.icon-edit {
-  color: #28B463;
-  width: 25px;
-  height: 25px;
-  margin-right: 0.8rem;
-
-  &:hover {
-    color: #239B56;
-  }
+.itens-edit-delete{
+  display: flex;
+  align-items: center;
 }
 
 .checked{

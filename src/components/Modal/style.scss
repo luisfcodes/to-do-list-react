@@ -3,18 +3,29 @@
   overflow: hidden;
   background-color: #E5E8E8;
 
+}
+
+.modal-text-edit {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+
   input {
+    margin-top: 0.5rem;
     border: 1px solid black;
-    margin: 1rem auto;
     display: block;
     width: 90%;
     padding: 0.3rem;
     border-radius: 0.2rem;
+    font-size: 1rem;
+    color: #4A4AFF;
   }
 }
 
 .modal-header{
-  background-color: #1F618D; 
+  background-color: #5656ca; 
 
   h2 {
     margin-left: 0.5rem;
@@ -56,3 +67,13 @@
   }
 }
 
+.icon-edit {
+  color: #28B463;
+  width: 25px;
+  height: 25px;
+  margin-right: 0.8rem;
+
+  &:hover {
+    color: #239B56;
+  }
+}
