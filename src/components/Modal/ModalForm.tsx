@@ -14,7 +14,6 @@ const customStyles = {
     width: '25%',
     border: 'none',
     padding: '0',
-    
   },
 };
 
@@ -67,8 +66,8 @@ export function ModalForm({tasks, setTasks, id, text}: ModalFormProps) {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        style={customStyles}
         contentLabel="Edit Task"
+        className="modal-style"
       >
         <div className="modal-content">
           <div className="modal-header">
