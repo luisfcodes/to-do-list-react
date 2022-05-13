@@ -10,5 +10,16 @@ footer{
 }
 
 .social-media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0.5rem;
+
+  li{
+
+    & + li {
+      margin-left: 0.5rem;
+    }
+    
+  }
 }
