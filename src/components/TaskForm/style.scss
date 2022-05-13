@@ -50,3 +50,34 @@
     }
   }
 }
+
+// Mobile
+
+@media only screen and (max-width: 768px){
+  .task-form{
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+
+    h3{
+      font-size: 0.9rem;
+      font-weight: 400;
+      padding: 0.5rem 1rem;
+    }
+
+    .task-name{
+      flex-direction: column;
+    }
+
+    .input-text {
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      width: 90%;
+    }
+
+    .input-button{
+      width: 90%;
+      margin: 0.8rem 0;
+    }
+  }
+}

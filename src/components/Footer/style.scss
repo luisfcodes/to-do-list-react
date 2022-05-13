@@ -1,4 +1,4 @@
-footer{
+footer {
   width: 100vw;
   bottom: 0;
   padding: 1rem;
@@ -9,17 +9,30 @@ footer{
   color: #7575FF;
 }
 
-.social-media{
+.social-media {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
 
-  li{
-
-    & + li {
+  li {
+    &+li {
       margin-left: 0.5rem;
     }
-    
+  }
+}
+
+// Mobile
+
+@media only screen and (max-width: 768px) {
+  footer {
+    font-size: 0.6rem;
+  }
+
+  .social-media {
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
