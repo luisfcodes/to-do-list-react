@@ -1,7 +1,7 @@
-import React from 'react'
 import logo from '../../assets/logo.svg'
 import menu from '../../assets/menu.svg'
 import './style.scss'
+import { Link } from "react-router-dom";
 
 export function Header(){
 
@@ -20,10 +20,10 @@ export function Header(){
 
   return (
     <header className='header'>
-      <a href="#">
+      <Link to="/">
         <img src={logo} alt="Logo" />
         <span>To-Do List</span>
-      </a>
+      </Link>
       <nav id='nav'>
         <button className='btn-mobile' onClick={e => toogleMenu(e)} aria-label="Abrir menu" aria-controls="menu" aria-haspopup="true" aria-expanded="false"><img src={menu} alt="Ícone menu"/></button>
         <ul id='menu' role="menu">
