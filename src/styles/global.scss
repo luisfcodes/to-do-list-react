@@ -36,8 +36,14 @@ li {
 }
 
 .container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 1320px;
   margin: 0 auto;
   min-height: 100vh;
+
+  main{
+    flex-grow: 1;
+  }
 }

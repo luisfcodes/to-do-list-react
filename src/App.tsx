@@ -22,8 +22,10 @@ export function App(){
   return (
       <div className='container'>
           <Header />
-          <TaskForm setTasks={addNewTask}/>
-          <TaskList tasks={tasks} setTasks={setTasks}/>
+          <main>
+            <TaskForm setTasks={addNewTask}/>
+            <TaskList tasks={tasks} setTasks={setTasks}/>
+          </main>
           <Footer />
       </div>
   )

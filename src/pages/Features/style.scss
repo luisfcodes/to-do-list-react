@@ -1,15 +1,15 @@
-.block-one{
+.block {
   margin-top: 2rem;
   display: flex;
   gap: 2rem;
   color: #fff;
 
-  img{
-    width: 70%;
-  }
-
   h2{
     color: #E6CB53;
+  }
+
+  img{
+    width: 70%;
   }
 
   p {
@@ -18,4 +18,59 @@
     text-align: justify;
     line-height: 1.5rem;
   }
+}
+
+.block-two {
+
+  margin-top: 4rem;
+
+  img {
+    order: 1;
+    border-radius: 0.8rem;
+  }
+  
+}
+
+// Mobile
+
+@media only screen and (max-width: 768px){
+
+  .block {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .block{
+    img {
+      width: 80%;
+    }
+
+    .block-text{
+      width: 80%;
+
+      h2 {
+        font-size: 1rem;
+      }
+
+    p{
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+      margin-top: 1rem;
+    }
+    }
+  }
+
+  .block-two {
+
+    margin-top: 2rem;
+    
+    img {
+      order: 0;
+    }
+
+    
+  }
+
+  
 }
