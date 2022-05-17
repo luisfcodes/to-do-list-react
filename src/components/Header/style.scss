@@ -27,16 +27,9 @@
     font-size: 1.3rem;
     color: #7575FF;
 
-    &:first-child:hover {
+    &:hover {
       border-bottom: 2px solid #E6CB53;
-      margin-bottom: 10px;
       cursor: pointer;
-
-      transition: margin 0.3s;
-    }
-
-    &:nth-child(-n+4){
-      cursor: not-allowed;
     }
   }
 

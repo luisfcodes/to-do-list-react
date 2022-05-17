@@ -1,0 +1,21 @@
+.block-one{
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  color: #fff;
+
+  img{
+    width: 70%;
+  }
+
+  h2{
+    color: #E6CB53;
+  }
+
+  p {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.5rem;
+  }
+}

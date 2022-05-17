@@ -49,7 +49,12 @@ module.exports = {
         test: /\.svg$/,
         exclude: /node_modules/,
         use: 'svg-url-loader',
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        exclude: /node_modules/,
+        use: 'file-loader',
+    }
     ]
   }
 }

@@ -27,8 +27,8 @@ export function Header(){
       <nav id='nav'>
         <button className='btn-mobile' onClick={e => toogleMenu(e)} aria-label="Abrir menu" aria-controls="menu" aria-haspopup="true" aria-expanded="false"><img src={menu} alt="Ícone menu"/></button>
         <ul id='menu' role="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Serviços</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/features">Recursos</Link></li>
           <li><a href="#">Planos</a></li>
           <li><a href="#">Sobre</a></li>
         </ul>

@@ -26,7 +26,7 @@ export function TaskForm({setTasks}:TaskFormProps){
         <h3>Adicione uma nova tarefa</h3>
       </div>
       <form className='task-name'>
-        <input type="text" className='input-text' placeholder='Digite o nome da tarefa' onChange={e => setTitle(e.target.value)} value={title}/>
+        <input type="text" className='input-text' placeholder='Insira o nome da tarefa' onChange={e => setTitle(e.target.value)} value={title}/>
         <input type="submit" value="Adicionar" className='input-button' onClick={e => validateNewTask(title, e)}/>
       </form>
     </section>
