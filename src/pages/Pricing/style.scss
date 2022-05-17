@@ -1,0 +1,152 @@
+.pricing-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fff;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #E6CB53;
+  }
+
+  p {
+    max-width: 50%;
+    text-align: center;
+  }
+}
+
+.pricing-list {
+  display: flex;
+  gap: 2rem;
+
+  div:first-child {
+    margin-top: 1.5rem;
+  }
+
+  div:last-child {
+    margin-top: 1.5rem;
+  }
+}
+
+.pricing-card {
+  min-width: 280px;
+  height: 400px;
+  border: 3px inset #7575FF;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    color: #E6CB53;
+    text-transform: uppercase;
+  }
+
+  ul {
+    flex-grow: 1;
+    margin-top: 2rem;
+  }
+
+  li {
+    color: #fff;
+
+    &+li {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.pricing-card-check {
+
+  span {
+
+    &:first-child {
+      color: #28B463;
+    }
+  }
+}
+
+.pricing-card-denied {
+
+  span {
+
+    &:first-child {
+      color: #CB4335;
+    }
+
+    &:last-child {
+      color: #999;
+    }
+
+  }
+}
+
+.pricing-card-button {
+  padding: 0.8rem 1rem;
+  width: 70%;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  background: rgb(213, 182, 46);
+  background: linear-gradient(142deg, rgba(213, 182, 46, 1) 0%, rgba(230, 203, 83, 1) 100%);
+  color: #222;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &:hover {
+    filter: brightness(0.85);
+  }
+
+}
+
+//Mobile
+
+@media only screen and (max-width: 768px) {
+
+  .pricing-main {
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      text-align: center;
+      
+      color: #E6CB53;
+    }
+
+    p {
+      max-width: 75%;
+      text-align: center;
+    }
+  }
+
+  .pricing-list {
+    flex-direction: column;
+    gap: 2rem;
+
+    div:first-child {
+      order: 0;
+      margin-top: 0;
+    }
+
+    div:last-child {
+      order: 1;
+      margin-top: 0;
+    }
+  }
+
+  .pricing-card-two {
+    order: 2;
+  }
+}
