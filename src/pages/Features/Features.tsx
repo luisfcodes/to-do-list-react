@@ -1,5 +1,6 @@
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
+import { Helmet } from 'react-helmet'
 import screenAddTaskDesktop from '../../assets/screenAddTaskDesktop.png';
 import screenAddTaskMobile from '../../assets/screenAddTaskMobile.png';
 import screenEditTaskDesktop from '../../assets/screenEditTaskDesktop.png';
@@ -10,6 +11,7 @@ import './style.scss'
 export function Features() {
   return (
     <div className="container">
+      <Helmet title="To-do list | Recursos" />
       <Header />
       <main>
         <section className="block block-one">

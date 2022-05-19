@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 import { Footer } from '../../components/Footer/Footer'
 import { Header } from '../../components/Header/Header'
 import './style.scss'
@@ -5,6 +6,7 @@ import './style.scss'
 export function Pricing(){
   return(
     <div className="container">
+      <Helmet title="To-do list | Planos" />
       <Header />
       <main className='pricing-main'>
         <h1>Escolha o plano ideal para otimizar sua rotina</h1>

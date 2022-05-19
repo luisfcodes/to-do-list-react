@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 import { TaskForm } from './components/TaskForm/TaskForm'
@@ -21,6 +22,7 @@ export function App(){
 
   return (
       <div className='container'>
+          <Helmet title="To-do list" />
           <Header />
           <main>
             <TaskForm setTasks={addNewTask}/>

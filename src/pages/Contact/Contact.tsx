@@ -1,5 +1,6 @@
 import { Footer } from '../../components/Footer/Footer'
 import { Header } from '../../components/Header/Header'
+import { Helmet } from 'react-helmet'
 import InputMask from 'react-input-mask'
 import './style.scss'
 
@@ -7,6 +8,7 @@ export function Contact(){
 
   return (
     <div className="container">
+      <Helmet title="To-do list | Contato" />
       <Header />
       <main className='main-form'>
           <form className='form-content'>
