@@ -30,7 +30,7 @@ export function Header(){
           <li><Link to="/">Home</Link></li>
           <li><Link to="/features">Recursos</Link></li>
           <li><Link to="/pricing">Planos</Link></li>
-          <li><a href="#">Sobre</a></li>
+          <li><Link to="/contact">Contato</Link></li>
         </ul>
       </nav>
     </header>
