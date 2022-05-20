@@ -1,18 +1,24 @@
-.modal-content {
+.modal-container {
   border-radius: 0.7rem;
   overflow: hidden;
   background-color: #E5E8E8;
 }
 
-.modal-style {
-  top: 40%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  position: absolute;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  width: 25%;
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 526px;
   border: none;
   padding: 0;
 }
@@ -95,7 +101,7 @@
 
 @media only screen and (max-width: 768px) {
 
-  .modal-style {
+  .modal-content {
     width: 90%;
   }
 

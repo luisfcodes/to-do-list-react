@@ -1,21 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsPencilSquare } from "react-icons/bs";
 import Modal from "react-modal"
 import "./style.scss"
-
-const customStyles = {
-  content: {
-    top: '40%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    width: '25%',
-    border: 'none',
-    padding: '0',
-  },
-};
 
 interface ModalFormProps {
   tasks: any;
@@ -67,9 +53,10 @@ export function ModalForm({tasks, setTasks, id, text}: ModalFormProps) {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Edit Task"
-        className="modal-style"
+        className="modal-content"
+        overlayClassName="modal-overlay"
       >
-        <div className="modal-content">
+        <div className="modal-container">
           <div className="modal-header">
             <h2>Editar tarefa</h2>
           </div>
