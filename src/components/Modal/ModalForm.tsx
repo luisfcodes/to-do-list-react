@@ -1,13 +1,29 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { BsPencilSquare } from "react-icons/bs";
 import Modal from "react-modal"
 import "./style.scss"
 
+interface TasksItens{
+  id: number;
+  title: string;
+  isChecked: boolean;
+}
+
 interface ModalFormProps {
-  tasks: any;
-  setTasks: any;
+  tasks: {
+    id: number,
+    title: string,
+    isChecked: boolean
+  }[];
+  setTasks: Dispatch<SetStateAction<TasksItens[]>>;
   id: number;
   text: string;
+}
+
+interface NewListProps {
+  id: number;
+  title: string;
+  isChecked: boolean
 }
 
 Modal.setAppElement('#root');
@@ -25,8 +41,8 @@ export function ModalForm({tasks, setTasks, id, text}: ModalFormProps) {
   }
 
   function editTask(id: number){
-    const newList: any = []
-    tasks.map((element: { id: number; title: string }) => {
+    const newList: NewListProps[] = []
+    tasks.map((element: { id: number, title: string, isChecked: boolean }) => {
       if (element.id !== id) {
         newList.push(element)
       } else {

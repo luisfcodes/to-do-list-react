@@ -1,17 +1,34 @@
 import './style.scss'
 import { CgTrash } from "react-icons/cg";
 import { ModalForm } from '../Modal/ModalForm';
+import { Dispatch, SetStateAction } from 'react';
+
+interface TasksItens{
+  id: number;
+  title: string;
+  isChecked: boolean;
+}
 
 interface TaskListProps {
-  tasks: any;
-  setTasks: any;
+  tasks: {
+    id: number;
+    title: string;
+    isChecked: boolean
+  }[];
+  setTasks: Dispatch<SetStateAction<TasksItens[]>>;
+}
+
+interface NewListProps {
+  id: number;
+  title: string;
+  isChecked: boolean;
 }
 
 export function TaskList({ tasks, setTasks }: TaskListProps) {
 
   function removeTask(id: number) {
-    const newList: any = []
-    tasks.map((element: { id: number }) => {
+    const newList: NewListProps[] = []
+    tasks.map((element: { id: number, title: string, isChecked: boolean }) => {
       if (element.id !== id) {
         newList.push(element)
       }
@@ -21,8 +38,8 @@ export function TaskList({ tasks, setTasks }: TaskListProps) {
 
 
   function isChecked(id: number) {
-    const newList: any = []
-    tasks.map((element: { id: number; isChecked: boolean }) => {
+    const newList: NewListProps[] = []
+    tasks.map((element: { id: number, title: string, isChecked: boolean }) => {
       if (element.id !== id) {
         newList.push(element)
       } else {

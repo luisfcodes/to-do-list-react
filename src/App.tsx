@@ -9,7 +9,7 @@ import './styles/global.scss'
 interface TasksItens{
   id: number;
   title: string;
-  isChecked: boolean
+  isChecked: boolean;
 }
 
 export function App(){
